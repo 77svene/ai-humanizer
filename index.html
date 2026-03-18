@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Humanizer</title>
+    <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f0f0f; color: #e0e0e0; min-height: 100vh; }
+    .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+    h1 { font-size: 2rem; margin-bottom: 8px; background: linear-gradient(135deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .subtitle { color: #888; margin-bottom: 32px; font-size: 0.95rem; }
+    textarea { width: 100%; height: 160px; background: #1a1a1a; border: 1px solid #333; border-radius: 10px; padding: 16px; color: #e0e0e0; font-size: 0.95rem; resize: vertical; font-family: inherit; }
+    textarea:focus { outline: none; border-color: #00c9ff; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; margin: 16px 0; padding: 14px 32px; background: linear-gradient(135deg, #00c9ff, #92fe9d); color: #0f0f0f; border: none; border-radius: 10px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: opacity 0.2s; }
+    .btn:hover { opacity: 0.85; }
+    .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .output-section { margin-top: 24px; }
+    .output-label { font-size: 0.85rem; color: #888; margin-bottom: 8px; }
+    .counter { float: right; font-size: 0.85rem; color: #666; }
+    .paywall-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 1000; justify-content: center; align-items: center; }
+    .paywall-overlay.active { display: flex; }
+    .paywall-box { background: #1a1a1a; border: 1px solid #333; border-radius: 16px; padding: 48px; text-align: center; max-width: 440px; width: 90%; }
+    .paywall-box h2 { font-size: 1.5rem; margin-bottom: 12px; }
+    .paywall-box p { color: #888; margin-bottom: 24px; line-height: 1.6; }
+    .paywall-box .price { font-size: 2rem; font-weight: 700; color: #92fe9d; margin-bottom: 24px; }
+    .paywall-btn { display: inline-block; padding: 14px 40px; background: linear-gradient(135deg, #00c9ff, #92fe9d); color: #0f0f0f; border-radius: 10px; font-weight: 700; text-decoration: none; font-size: 1rem; }
+    .close-paywall { display: block; margin-top: 16px; color: #666; background: none; border: none; cursor: pointer; font-size: 0.85rem; }
+    .spinner { display: inline-block; width: 18px; height: 18px; border: 2px solid #0f0f0f; border-top-color: transparent; border-radius: 50%; animation: spin 0.6s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .error { color: #ff6b6b; font-size: 0.85rem; margin-top: 8px; display: none; }
+    </style>
+    </head>
+    <body>
+    <div class="container">
+      <h1>AI Text Humanizer</h1>
+      <p class="subtitle">Paste AI-generated text below and make it sound naturally human.</p>
+      <textarea id="inputText" placeholder="Paste your AI-generated text here..."></textarea>
+      <button class="btn" id="humanizeBtn" onclick="humanize()">
+        <span id="btnText">Humanize</span>
+      </button>
+      <div class="error" id="errorMsg"></div>
+      <div class="output-section">
+        <div class="output-label">Humanized Output <span class="counter" id="counter"></span></div>
+        <textarea id="outputText" readonly placeholder="Your humanized text will appear here..."></textarea>
+      </div>
+    </div>
+    <div class="paywall-overlay" id="paywall">
+      <div class="paywall-box">
+        <h2>Free Uses Exhausted</h2>
+        <p>You have used all 3 free humanizations. Upgrade for unlimited access.</p>
+        <div class="price">$4.99</div>
+        <a class="paywall-btn" id="payLink" href="#">Unlock Unlimited</a>
+        <button class="close-paywall" onclick="closePaywall()">Maybe later</button>
+      </div>
+    </div>
+    <script>
+    const FREE_LIMIT = 3;
+    let uses = parseInt(localStorage.getItem("hz_uses") || "0");
+    
+    function updateCounter() {
+      const remaining = Math.max(0, FREE_LIMIT - uses);
+      document.getElementById("counter").textContent = remaining + " free uses remaining";
+    }
+    updateCounter();
+    
+    function showPaywall() {
+      document.getElementById("paywall").classList.add("active");
+    }
+    function closePaywall() {
+      document.getElementById("paywall").classList.remove("active");
+    }
+    
+    async function humanize() {
+      const input = document.getElementById("inputText").value.trim();
+      const errEl = document.getElementById("errorMsg");
+      errEl.style.display = "none";
+      if (!input) { errEl.textContent = "Please enter some text."; errEl.style.display = "block"; return; }
+      if (input.length < 20) { errEl.textContent = "Please enter at least 20 characters."; errEl.style.display = "block"; return; }
+      if (uses >= FREE_LIMIT) { showPaywall(); return; }
+    
+      const btn = document.getElementById("humanizeBtn");
+      const btnText = document.getElementById("btnText");
+      btn.disabled = true;
+      btnText.innerHTML = '<span class="spinner"></span> Processing...';
+    
+      try {
+        const resp = await fetch("https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer __HF_TOKEN__"
+          },
+          body: JSON.stringify({
+            inputs: "Rewrite the following text to sound naturally human, as if written by a real person. Keep the same meaning but vary sentence structure, add natural transitions, and remove any robotic or formulaic patterns. Do not add commentary, just output the rewritten text:\n\n" + input,
+            parameters: { max_new_tokens: 1024, temperature: 0.7 }
+          })
+        });
+        if (!resp.ok) throw new Error("API error: " + resp.status);
+        const data = await resp.json();
+        let text = "";
+        if (Array.isArray(data) && data[0]) {
+          text = data[0].generated_text;
+          const idx = text.indexOf("\n\n");
+          if (idx > -1) text = text.substring(idx + 2);
+        } else if (data.generated_text) {
+          text = data.generated_text;
+        } else {
+          throw new Error("Unexpected response");
+        }
+        document.getElementById("outputText").value = text.trim();
+        uses++;
+        localStorage.setItem("hz_uses", uses.toString());
+        updateCounter();
+        if (uses >= FREE_LIMIT) {
+          setTimeout(showPaywall, 500);
+        }
+      } catch (e) {
+        errEl.textContent = "Error: " + e.message + ". Please try again.";
+        errEl.style.display = "block";
+      } finally {
+        btn.disabled = false;
+        btnText.textContent = "Humanize";
+      }
+    }
+    </script>
+    </body>
+    </html>

@@ -27,3 +27,11 @@ Start bypassing AI detectors today — try it free and make your text sound 100%
 
 Ready to go? Paste your text above and click Humanize now.
 ```
+    ## Free Tier & Use Case
+    **Primary Use Case:** Transform robotic AI text into natural, human-sounding content for blogs, LinkedIn posts, emails and marketing copy while bypassing AI detectors.
+    
+    - Completely free with usage limits (5 uses/day)
+    - No crypto payments required
+    - Upgrade option for unlimited access coming soon
+    
+    

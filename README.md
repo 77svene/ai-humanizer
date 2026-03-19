@@ -45,3 +45,8 @@ No payment. No crypto. Just paste, humanize, and publish with confidence.
 ## Monetization
 Free tier: 5 uses/day with usage limits.
 Upgrade for unlimited access via Stripe (coming soon).
+
+## Free Tier & Pricing
+- Free: 5 uses/day with usage limits
+- Upgrade for unlimited access via Stripe checkout (no crypto)
+[Get Unlimited](https://github.com/77svene/ai-humanizer#pricing)

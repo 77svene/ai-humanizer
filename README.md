@@ -1,39 +1,41 @@
-# AI Humanizer
-
-Humanize AI text to bypass detectors in 1 click. Start for free.
-
 ```markdown
 # AI Text Humanizer
 
-Bypass AI detectors and make text sound 100% human in seconds.
+**Humanize AI text to sound natural and bypass detectors.**
 
-Transform robotic AI-generated content from ChatGPT, Claude, or any LLM into natural, engaging text that reads like a real person wrote it — undetectable by Originality, GPTZero, Turnitin, and other detectors.
+Instantly transform robotic AI-generated content from ChatGPT, Claude, Gemini, or any LLM into natural, human-sounding writing that engages readers and passes Originality.ai, GPTZero, Turnitin, ZeroGPT, and other leading detectors.
 
-## Primary Use Case
-**Bypass AI detectors and make text sound 100% human in seconds**
+**[Try it Free Now →](https://huggingface.co/spaces/orama-ai/ai-text-humanizer)**
 
-Paste AI text and instantly get human-sounding writing that engages readers and passes every detector.
+## Features
 
-## How it Works
+- **Completely Free Tier** — 5 uses per day with no credit card or crypto required
+- One-click humanization that makes AI text read like it was written by a human
+- High success rate against all major AI detectors
+- Preserves meaning, tone, and intent while enhancing readability and flow
+- Fast, clean interface with no signup needed to start
+- Privacy-first — your text is not stored or used for training
+
+## Use Cases
+
+- **Content Creators & Bloggers**: Convert AI drafts into natural blog posts and articles
+- **LinkedIn & Social Media**: Create authentic-sounding posts and comments that engage audiences
+- **Marketing & Sales**: Humanize email campaigns, landing pages, and ad copy
+- **Students & Academics**: Rewrite AI-assisted work to sound natural while maintaining academic integrity
+- **Business Professionals**: Transform AI-generated reports, proposals, and client communications
+- **SEO Specialists**: Produce undetectable content that ranks without triggering AI flags
+
+## How It Works
+
 1. Paste your AI-generated text
 2. Click **Humanize**
-3. Copy undetectable, natural output
+3. Copy natural, undetectable output ready to publish
 
-**Free tier** available with monthly limits. Upgrade instantly via Stripe for unlimited use and faster processing.
-
-Start bypassing AI detectors today — try it free and make your text sound 100% human in seconds.
+**Free forever tier available** — limited to 5 uses per day. Perfect for testing and light usage.
 
 ---
 
-Ready to go? Paste your text above and click Humanize now.
-```
-    ## Free Tier & Use Case
-    **Primary Use Case:** Transform robotic AI text into natural, human-sounding content for blogs, LinkedIn posts, emails and marketing copy while bypassing AI detectors.
-    
-    - Completely free with usage limits (5 uses/day)
-    - No crypto payments required
-    - Upgrade option for unlimited access coming soon
+**[Start Humanizing Your AI Text Now](https://huggingface.co/spaces/orama-ai/ai-text-humanizer)**
 
-## Pricing & Access
-- Free: 5 uses/day with usage limits
-- Upgrade for unlimited via Stripe (coming soon)
+No payment. No hassle. Just paste, humanize, and publish with confidence.
+```

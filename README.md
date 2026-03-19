@@ -1,3 +1,7 @@
+# AI Humanizer
+
+Humanize AI text to bypass detectors in 1 click. Start for free.
+
 ```markdown
 # AI Text Humanizer
 

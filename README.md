@@ -1,8 +1,10 @@
-# AI Text Humanizer
+# AI Humanizer
+    Make AI text sound completely human in 1 click
     
-    Make AI-generated text sound 100% human in one click.
+    Instantly rewrite robotic AI content into natural writing that passes AI detectors while keeping your meaning.
     
-    **Use case:** Paste ChatGPT or Claude output and instantly get natural writing that passes AI detectors.
+    Paste text → Humanize → Copy perfect output.
+    Free tier available. No crypto required.
     
-    Free with usage limits. No sign-up.
+    Live: https://huggingface.co/spaces/orama-ai/ai-text-humanizer
     

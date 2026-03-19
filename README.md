@@ -41,3 +41,7 @@ Instantly transform robotic AI-generated content from ChatGPT, Claude, Gemini, o
 **[Start Humanizing Your AI Text Now](https://huggingface.co/spaces/orama-ai/ai-text-humanizer)**
 
 No payment. No crypto. Just paste, humanize, and publish with confidence.
+
+## Monetization
+Free tier: 5 uses/day with usage limits.
+Upgrade for unlimited access via Stripe (coming soon).

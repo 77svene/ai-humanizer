@@ -33,5 +33,7 @@ Ready to go? Paste your text above and click Humanize now.
     - Completely free with usage limits (5 uses/day)
     - No crypto payments required
     - Upgrade option for unlimited access coming soon
-    
-    
+
+## Pricing & Access
+- Free: 5 uses/day with usage limits
+- Upgrade for unlimited via Stripe (coming soon)

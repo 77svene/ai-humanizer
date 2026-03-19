@@ -39,3 +39,9 @@ Instantly transform robotic AI-generated content from ChatGPT, Claude, Gemini, o
 
 No payment. No hassle. Just paste, humanize, and publish with confidence.
 ```
+
+## Free Tier
+5 uses/day free with usage limits. Upgrade for unlimited via Stripe (coming soon).
+
+## Use Case
+Humanize AI text to bypass detectors instantly - perfect for writers and marketers.

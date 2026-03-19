@@ -1,0 +1,6 @@
+{
+  "daily_limit": 5,
+  "limit_unit": "requests",
+  "upgrade_url": "https://gumroad.com/l/sovereign-hum",
+  "description": "Free tier allows 5 daily requests. Upgrade for unlimited."
+}

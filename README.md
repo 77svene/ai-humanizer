@@ -1,21 +1,25 @@
+```markdown
 # AI Text Humanizer
-    
-    Transform robotic AI text into natural, human-sounding writing in one click.
-    
-    Use case: Paste ChatGPT content and get undetectable, engaging text that readers love.
-    
 
-## Use Case
-Rewrite awkward AI text to sound 100% human in one click
+Bypass AI detectors and make text sound 100% human in seconds.
 
-Free tier available. Upgrade for unlimited access (Stripe coming soon).
+Transform robotic AI-generated content from ChatGPT, Claude, or any LLM into natural, engaging text that reads like a real person wrote it — undetectable by Originality, GPTZero, Turnitin, and other detectors.
 
 ## Primary Use Case
-Make your AI-generated text sound completely natural and human-like in 1 click to bypass detectors.
+**Bypass AI detectors and make text sound 100% human in seconds**
 
-## How it works
-1. Paste AI text
-2. Click Humanize
-3. Copy undetectable output
+Paste AI text and instantly get human-sounding writing that engages readers and passes every detector.
 
-Free tier available. Upgrade for unlimited uses.
+## How it Works
+1. Paste your AI-generated text
+2. Click **Humanize**
+3. Copy undetectable, natural output
+
+**Free tier** available with monthly limits. Upgrade instantly via Stripe for unlimited use and faster processing.
+
+Start bypassing AI detectors today — try it free and make your text sound 100% human in seconds.
+
+---
+
+Ready to go? Paste your text above and click Humanize now.
+```

@@ -1,3 +1,7 @@
+# AI Text Humanizer
+
+Rewrite text to sound more human in 1 click. Free with daily usage limits - no crypto required.
+
 # AI Text Humanizer - Make AI Text Sound Human
     
     Transform AI-generated content into natural, human-like writing. Perfect for bloggers, students, and content creators.
@@ -82,4 +86,3 @@
     ---
     
     *Built with [HuggingFace Spaces](https://huggingface.co/spaces) | [Try All AI Writing Tools](https://huggingface.co/spaces/orama-ai/ai-paraphrase-pro)*
-    

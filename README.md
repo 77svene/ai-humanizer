@@ -1,10 +1,7 @@
-# AI Humanizer
-    Make AI text sound completely human in 1 click
-    
-    Instantly rewrite robotic AI content into natural writing that passes AI detectors while keeping your meaning.
-    
-    Paste text → Humanize → Copy perfect output.
-    Free tier available. No crypto required.
-    
-    Live: https://huggingface.co/spaces/orama-ai/ai-text-humanizer
-    
+**Rewrite AI text to sound 100% human in 1 click.**
+
+Turn robotic AI-generated content into natural, flowing writing that truly connects with readers. The tool transforms mechanical text into authentic human-like prose while perfectly preserving your original meaning and intent.
+
+This helps your content pass AI detectors and feel genuine instead of artificial. Ideal for bloggers, marketers, students, content creators, and professionals who want their AI-assisted writing to engage audiences and build real connection.
+
+Live: https://huggingface.co/spaces/orama-ai/ai-text-humanizer
